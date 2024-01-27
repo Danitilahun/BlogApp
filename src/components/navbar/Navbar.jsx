@@ -1,16 +1,26 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import styles from "./navbar.module.css";
-import Image from "next/image";
 import Link from "next/link";
 import AuthLinks from "../authLinks/AuthLinks";
 import ThemeToggle from "../themeToggle/ThemeToggle";
+import { FaBlogger } from "react-icons/fa";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const Navbar = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <div className={styles.social}>
         <Link href="/">
-          <div
+          <FaBlogger
+            style={{
+              fontSize: "3em",
+              color: theme !== "dark" ? "black" : "white",
+            }}
+          />
+
+          {/* <div
             style={{ width: "200px", height: "100px", position: "relative" }}
           >
             <Image
@@ -19,10 +29,11 @@ const Navbar = () => {
               layout="fill"
               objectFit="contain"
             />
-          </div>
+
+          </div> */}
         </Link>
       </div>
-      {/* <div className={styles.logo}>WanderWisdom</div> */}
+
       <div className={styles.links}>
         <ThemeToggle />
         <AuthLinks />
