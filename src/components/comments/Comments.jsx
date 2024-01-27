@@ -20,11 +20,12 @@ const fetcher = async (url) => {
   return data;
 };
 
+const apiUrl = process.env.API_URL;
 const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    `${apiUrl}/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 

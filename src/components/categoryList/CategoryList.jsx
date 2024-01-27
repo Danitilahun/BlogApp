@@ -4,9 +4,10 @@ import styles from "./categoryList.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
+const apiUrl = process.env.API_URL;
 const getData = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/categories", {
+    const res = await fetch(`${apiUrl}/api/categories`, {
       cache: "no-store",
     });
 
