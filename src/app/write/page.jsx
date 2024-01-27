@@ -78,6 +78,7 @@ const WritePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
+    console.log("media", media);
     const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
@@ -103,9 +104,12 @@ const WritePage = () => {
         className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
-        <option value="style">style</option>
+      <select
+        className={styles.select}
+        onChange={(e) => setCatSlug(e.target.value)}
+      >
         <option value="fashion">fashion</option>
+        <option value="style">style</option>
         <option value="food">food</option>
         <option value="culture">culture</option>
         <option value="travel">travel</option>

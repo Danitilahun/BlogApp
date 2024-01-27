@@ -1,14 +1,23 @@
 .container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
+  z-index: 1000; /* Set a high z-index to keep it above other elements */
+  box-shadow: 0px 8px 15px -5px rgba(0, 0, 0, 0.1);
 }
 
 .social {
   display: flex;
   gap: 10px;
   flex: 1;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -21,6 +30,7 @@
 .links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 20px;
   flex: 1;
   font-size: 20px;
@@ -36,23 +46,26 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  .social {
-    display: none;
-  }
   .logo {
-    text-align: left;
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
   .logo {
     font-size: 24px;
   }
+  .social {
+    gap: 0;
+  }
 }
 @media screen and (max-width: 640px) {
-  .links{
+  .links {
     justify-content: flex-end;
   }
   .link {
     display: none;
+  }
+  .social {
+    gap: 0;
   }
 }

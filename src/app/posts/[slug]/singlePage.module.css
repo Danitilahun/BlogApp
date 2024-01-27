@@ -27,7 +27,7 @@
 
 .avatar {
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .userTextContainer {
@@ -88,7 +88,7 @@
     font-size: 36px;
   }
 
-  .description p{
+  .description p {
     font-size: 18px;
   }
 }

@@ -1,5 +1,5 @@
 .container {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .title {
@@ -21,7 +21,7 @@
 }
 
 .image {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .textContainer {

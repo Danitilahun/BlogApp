@@ -9,17 +9,22 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.social}>
-        <Image src="/facebook.png" alt="facebook" width={24} height={24} />
-        <Image src="/instagram.png" alt="instagram" width={24} height={24} />
-        <Image src="/tiktok.png" alt="tiktok" width={24} height={24} />
-        <Image src="/youtube.png" alt="youtube" width={24} height={24} />
+        <Link href="/">
+          <div
+            style={{ width: "200px", height: "100px", position: "relative" }}
+          >
+            <Image
+              src="/572.png"
+              alt="My Image Alt Text"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+        </Link>
       </div>
-      <div className={styles.logo}>lamablog</div>
+      {/* <div className={styles.logo}>WanderWisdom</div> */}
       <div className={styles.links}>
         <ThemeToggle />
-        <Link href="/" className={styles.link}>Homepage</Link>
-        <Link href="/" className={styles.link}>Contact</Link>
-        <Link href="/" className={styles.link}>About</Link>
         <AuthLinks />
       </div>
     </div>

@@ -17,6 +17,7 @@
 .logo {
   display: flex;
   align-items: center;
+  justify-self: start;
   gap: 10px;
 }
 
