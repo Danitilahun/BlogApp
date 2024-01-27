@@ -1,24 +1,25 @@
-import React from "react";
+"use client";
+import React, { useContext } from "react";
 import styles from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { FaBlogger } from "react-icons/fa";
+import { ThemeContext } from "@/context/ThemeContext";
 
 const Footer = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <div
-            style={{ width: "200px", height: "100px", position: "relative" }}
-          >
-            <Image
-              src="/572.png" // Set the path to your image
-              alt="My Image Alt Text"
-              layout="fill" // Fill the entire container
-              objectFit="contain" // Cover the entire container, maintaining aspect ratio
+          <Link href="/">
+            <FaBlogger
+              style={{
+                fontSize: "3em",
+                color: theme !== "dark" ? "black" : "white",
+              }}
             />
-          </div>
-          {/* <h1 className={styles.logoText}>Lamablog</h1> */}
+          </Link>
         </div>
         <p className={styles.desc}>
           Thank you for stepping into the world of our thoughts. As you journey

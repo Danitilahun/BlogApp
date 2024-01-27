@@ -19,18 +19,6 @@ const Navbar = () => {
               color: theme !== "dark" ? "black" : "white",
             }}
           />
-
-          {/* <div
-            style={{ width: "200px", height: "100px", position: "relative" }}
-          >
-            <Image
-              src="/572.png"
-              alt="My Image Alt Text"
-              layout="fill"
-              objectFit="contain"
-            />
-
-          </div> */}
         </Link>
       </div>
 
