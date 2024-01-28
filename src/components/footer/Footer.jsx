@@ -47,8 +47,8 @@ const Footer = () => {
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="/https://github.com/Danitilahun">Github</Link>
-          <Link href="/http://www.linkedin.com/in/daniel-tilahun-017878264/">
+          <Link href="https://github.com/Danitilahun">Github</Link>
+          <Link href="http://www.linkedin.com/in/daniel-tilahun-017878264/">
             LinkedIn
           </Link>
         </div>
