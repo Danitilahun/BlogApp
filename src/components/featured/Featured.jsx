@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./featured.module.css";
 import Image from "next/image";
+import Hero from "./Hero/Hero";
 
 const Featured = () => {
   return (
@@ -9,6 +10,7 @@ const Featured = () => {
         <b>Hey, Daniel here!</b> Explore Ideas, Embrace Insight. Elevate Your
         Journey with Every Read.
       </h1>
+      {/* <Hero /> */}
       <div className={styles.post}>
         <div className={styles.imgContainer}>
           <Image src="/pr.webp" alt="" fill className={styles.image} />
