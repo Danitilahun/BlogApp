@@ -1,77 +1,77 @@
-.container {
-  margin-top: 20px;
-}
-
-.title {
-  font-size: 96px;
-  font-weight: 300;
-}
-
-.post {
-  margin-top: 60px;
+/* components/HeroSection.module.css */
+.hero {
+  background-image: url("/bg.jpg"); /* Add your chosen image path */
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 50px;
-}
-
-.imgContainer {
-  flex: 1;
-  height: 500px;
+  color: white;
+  text-align: center;
   position: relative;
 }
 
-.image {
-  object-fit: contain;
+.heroContent {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
 }
 
-.textContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.heroContent h1 {
+  color: #ffffff; /* Ensures bright white color for high contrast */
+  font-size: 32px; /* Adjust font size as needed */
+  margin-bottom: 20px;
 }
 
-.postTitle {
-  font-size: 40px;
+.heroContent p {
+  color: #ffffff; /* Lighter gray for paragraph to differentiate from heading */
+  font-size: 18px; /* Adjust paragraph font size for readability */
+  line-height: 1.6; /* Improves readability of text */
 }
 
-.postDesc {
-  font-size: 20px;
-  font-weight: 300;
-  color: var(--softTextColor);
-}
-
-.button {
-  padding: 16px 20px;
+/* components/HeroSection.module.css */
+.ctaButton {
+  display: inline-block; /* Ensures proper padding and margins */
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #007bff;
   border: none;
+  color: white;
+  cursor: pointer;
   border-radius: 5px;
-  width: max-content;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  text-decoration: none; /* Removes underline from links */
 }
 
-@media screen and (max-width: 1280px) {
-  .title {
-    font-size: 72px;
-  }
+.ctaButton:hover {
+  background-color: #0056b3;
 }
 
-@media screen and (max-width: 1024px) {
-  .title {
-    font-size: 64px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroContent {
+    padding: 15px;
+    background: rgba(
+      0,
+      0,
+      0,
+      0.6
+    ); /* Slightly darker for better readability on small devices */
   }
 
-  .imgContainer {
-    display: none;
+  .heroContent h1 {
+    font-size: 24px; /* Smaller heading on mobile */
   }
-}
 
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 48px;
+  .heroContent p {
+    font-size: 16px; /* Adjust paragraph font size for readability */
   }
-}
 
-@media screen and (max-width: 640px) {
-  .title {
-    font-size: 36px;
+  .ctaButton {
+    padding: 8px 20px;
+    font-size: 14px; /* Smaller button text */
   }
 }
