@@ -52,6 +52,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
   .heroContent {
     padding: 15px;
     background: rgba(
